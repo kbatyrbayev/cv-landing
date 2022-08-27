@@ -300,6 +300,15 @@ img {
   padding: 15px 10px;
 }
 
+.skills__items.links {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .skills__items span {
   font-weight: 500;
   font-size: 12px;
