@@ -5,23 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
+  <link rel="stylesheet" href="/css/style.min.css">
   <script>
     document.addEventListener("DOMContentLoaded", function(event) { 
-      let hrefs = [
-      "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
-      "css/style.min.css?v=2"
-      ];
-      for (let i = 0; i < 2; i++) {
-        var resource = document.createElement('link'); 
-        resource.setAttribute("rel", "stylesheet");
-        resource.setAttribute("href",hrefs[i]);
-        resource.setAttribute("type","text/css");      
-        var head = document.getElementsByTagName('head')[0];
-        head.appendChild(resource);
-      }
-      var topBg = document.getElementsByClassName('hero__container__top');
-      topBg[0].style.backgroundImage = "url('../assets/bg.jpg')";
-    });
+      var resource = document.createElement('link'); 
+      resource.setAttribute("rel", "stylesheet");
+      resource.setAttribute("href", "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+      resource.setAttribute("type","text/css");      
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(resource);    });
     </script>
 </head>
 <body>

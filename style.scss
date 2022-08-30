@@ -55,8 +55,12 @@ img {
     overflow: hidden;
     &__top {
       height: 100px;
+      background-image: url("../assets/bg.jpg");
       background-repeat: no-repeat;
       background-position: center;
+      @media (max-width: 400px) {
+        background-image: url("/assets/top.jpg");
+      }
     }
     &__main {
       display: flex;
@@ -211,12 +215,12 @@ img {
 }
 
 .aside {
-  flex: 0 0 (255px / 1120px * 100%);
+  flex: 0 0 calc(255px / 1120px * 100%);
   min-width: 170px;
 }
 
 .main {
-  flex: 0 1 (835px / 1120px * 100%);
+  flex: 0 1 calc(835px / 1120px * 100%);
   background: var(--light-color);
   border-radius: 20px;
   padding: 30px;
@@ -250,7 +254,7 @@ img {
   &__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
     padding: 15px 10px;
     &.links {
       flex-direction: column;
@@ -319,8 +323,8 @@ img {
     margin-bottom: 10px;
   }
   &__period {
-    font-weight: 500;
     grid-area: period;
+    font-weight: 500;
   }
   &__place {
     grid-area: place;
@@ -331,11 +335,12 @@ img {
     font-size: 14px;
   }
   @media (max-width: 750px) {
-    grid-template-columns: none;
-    grid-template-rows: auto;
     grid-template-areas:
       "period . "
       "place position";
+    grid-template-columns: none;
+    grid-template-rows: auto;
+    
     &__position {
       text-align: right;
     }
