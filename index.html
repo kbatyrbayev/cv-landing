@@ -5,7 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      let hrefs = [
+      "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+      "css/style.min.css?v=2"
+      ];
+      for (let i = 0; i < 2; i++) {
+        var resource = document.createElement('link'); 
+        resource.setAttribute("rel", "stylesheet");
+        resource.setAttribute("href",hrefs[i]);
+        resource.setAttribute("type","text/css");      
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(resource);
+      }
+      var topBg = document.getElementsByClassName('hero__container__top');
+      topBg[0].style.backgroundImage = "url('../assets/bg.jpg')";
+    });
+    </script>
 </head>
 <body>
 
@@ -15,7 +32,7 @@
         <div class="hero__container__top"></div>
         <div class="hero__container__main">
           <div class="hero__img">
-            <img src="./assets/avatar.jpg" alt="avatar">
+            <img src="./assets/avatar.jpg" alt="avatar" width="190" height="190">
           </div>
           <div class="hero__info">
             <h1 class="hero__title">Kairat Batyrbayev</h1>
@@ -37,16 +54,16 @@
             </a>
             <div class="hero__socials">
               <a href="mailto:k.batyrbayev@gmail.com" class="hero__social" target="_blank">
-                <img src="/assets/icons/gmail.svg" alt="gmail-icon">
+                <img src="/assets/icons/gmail.svg" alt="gmail-icon" width="24" height="24">
               </a>
               <a href="https://wa.me/77079979395" class="hero__social" target="_blank">
-                <img src="/assets/icons/whatsapp.svg" alt="whatsapp-icon">
+                <img src="/assets/icons/whatsapp.svg" alt="whatsapp-icon" width="24" height="24">
               </a>
               <a href="https://t.me/kairat_tg" class="hero__social" target="_blank">
-                <img src="/assets/icons/telegram.svg" alt="telegram-icon">
+                <img src="/assets/icons/telegram.svg" alt="telegram-icon" width="24" height="24">
               </a>
               <a href="tel:+77079979395" class="hero__social" target="_blank">
-                <img src="/assets/icons/phone.svg" alt="phone-icon">
+                <img src="/assets/icons/phone.svg" alt="phone-icon" width="24" height="24">
               </a>
             </div>
           </div>
@@ -55,34 +72,34 @@
     </div>
   </section>
 
-  <section class="important">
+  <div class="important">
     <div class="container important__container">
       <aside class="aside">
         <article class="skills">
-          <div class="skills__title">Skills</div>
-          <div class="skills__items">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JS</div>
-            <div class="skill">TS</div>
-            <div class="skill">SCSS</div>
-            <div class="skill">Angular 2+</div>
-            <div class="skill">Ng-material</div>
-            <div class="skill">Ng-cli</div>
-            <div class="skill">JSON</div>
-            <div class="skill">API</div>
-          </div>
+          <h2 class="skills__title">Skills</h2>
+          <ul class="skills__items">
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">JS</li>
+            <li class="skill">TS</li>
+            <li class="skill">SCSS</li>
+            <li class="skill">Angular 2+</li>
+            <li class="skill">Ng-material</li>
+            <li class="skill">Ng-cli</li>
+            <li class="skill">JSON</li>
+            <li class="skill">API</li>
+          </ul>
         </article>
         <article class="skills">
-          <div class="skills__title">Languages</div>
-          <div class="skills__items">
-            <div class="skill">Kazakh</div>
-            <div class="skill">Russian</div>
-            <div class="skill">English</div>
-          </div>
+          <h3 class="skills__title">Languages</h3>
+          <ul class="skills__items">
+            <li class="skill">Kazakh</li>
+            <li class="skill">Russian</li>
+            <li class="skill">English</li>
+          </ul>
         </article>
         <article class="skills">
-          <div class="skills__title">Education</div>
+          <h4 class="skills__title">Education</h4>
           <div class="skills__items">
             <span>
               Suleyman Demirel University <br>
@@ -92,7 +109,7 @@
           </div>
         </article>
         <article class="skills">
-          <div class="skills__title">Other links</div>
+          <h5 class="skills__title">Other links</h5>
           <div class="skills__items links">
             <a href="https://github.com/kbatyrbayev" target="_blank" class="skills__link">
               github.com/kbatyrbayev
@@ -105,9 +122,9 @@
       </aside>
       <div class="main">
         <article class="experience">
-          <div class="experience__title">
+          <h2 class="experience__title">
             Experience
-          </div>
+          </h2>
           <div class="experience__body">
             <div class="work">
               <div class="work__period">Avg 2017 - now</div>
@@ -127,11 +144,11 @@
           </div>
         </article>
         <article class="projects">
-          <div class="projects__title">
+          <h3 class="projects__title">
             Projects
-          </div>
+          </h3>
           <div class="projects__body">
-            <ul class="list">
+            <ol class="list">
               <li class="item">
                 <strong>CRM система для Антикор</strong>
                 <p>Руководил командой frontend-разработчиков, распределял всем задачи и сам тоже участвовал в разработке</p>
@@ -152,13 +169,13 @@
                 <strong>DMMS</strong>
                 <p>Интерактивная информационная система для диспетчерского центра "ГазПромНефть"</p>
               </li>
-            </ul>
+            </ol>
           </div>
         </article>
         <article class="projects">
-          <div class="projects__title">
+          <h4 class="projects__title">
             Pet projects
-          </div>
+          </h4>
           <div class="projects__body flex">
             <a class="skill" href="https://kairat.dev/promos/iris/" target="_blank">IRIS</a>
             <a class="skill" href="https://kairat.dev/promos/ninety-one/" target="_blank">Ninety One</a>
@@ -168,9 +185,7 @@
         </article>
       </div>
     </div>
-  </section>
-
-  
+  </div>
 
 </body>
 </html>
