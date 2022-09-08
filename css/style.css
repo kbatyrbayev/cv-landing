@@ -344,11 +344,22 @@ img {
 .projects__body ol li strong {
   font-weight: 500;
 }
+.projects__body ol li strong a {
+  color: var(--light-blue-color);
+  font-weight: 400;
+}
 .projects__body ol li p {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   margin-top: 6px;
+}
+.projects__body ol li p a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.projects__body ol li p a:active {
+  pointer-events: none;
 }
 .projects__body .skill {
   cursor: pointer;

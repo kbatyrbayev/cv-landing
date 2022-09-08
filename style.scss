@@ -388,12 +388,23 @@ img {
         }
         strong {
           font-weight: 500;
+          a {
+            color: var(--light-blue-color);
+            font-weight: 400;
+          }
         }
         p {
           font-weight: 400;
           font-size: 14px;
           line-height: 16px;
           margin-top: 6px;
+          a {
+            color: var(--accent-color);
+            text-decoration: none;
+            &:active {
+              pointer-events: none;
+            }
+          }
         }
       }
     }
