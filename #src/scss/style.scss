@@ -401,8 +401,9 @@ img {
           a {
             color: var(--accent-color);
             text-decoration: none;
-            &:active {
+            &.in-work {
               pointer-events: none;
+              color: rgb(167, 167, 167);
             }
           }
         }
